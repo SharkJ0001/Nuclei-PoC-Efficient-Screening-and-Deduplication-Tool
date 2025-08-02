@@ -1,0 +1,11 @@
+将Nuclei-PoC_Deduplication.py脚本文件和/nuclei_poc放在同级目录下
+
+基本用法：指定源目录和最终输出目录
+python Nuclei-PoC_Deduplication.py --source nuclei_poc --output pocall 
+
+高级用法：排除info和low两个等级，8线程加速处理，将处理错误的poc放入/error_files
+python Nuclei-PoC_Deduplication.py  --source nuclei_poc --output pocall --exclude-severity info low --workers 8 --collect-errors
+
+Nuclei-PoC_Deduplication.log 记录处置出错的poc原因
+
+/error  集中处置出错的所有poc
